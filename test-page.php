@@ -14,4 +14,18 @@ $APPLICATION->SetTitle("Test page");
 		"IBLOCK_TYPE" => "social_network",
 		"LIST_PROPERTY_CODE" => array("ICON_NETWORK","")
 	)
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?><br>
+ <?$APPLICATION->IncludeComponent(
+	"descr",
+	"",
+	Array(
+		"CACHE_FILTER" => "N",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"ELEMENT_SORT_FIELD" => "sort",
+		"ELEMENT_SORT_ORDER" => "asc",
+		"IBLOCK_ID" => "6",
+		"IBLOCK_TYPE" => "descr_iblock",
+		"LIST_PROPERTY_CODE" => array("","")
+	)
+);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

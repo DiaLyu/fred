@@ -1,0 +1,16 @@
+
+
+/* Start:/local/css/socials/styles.css?1699339279171*/
+.social-container{
+    display: flex;
+    padding: 20px 0;
+}
+.social-container-link{
+    margin: 0 10px;
+}
+.social-container-link img{
+    height: 40px;
+    width: 40px;
+}
+/* End */
+/* /local/css/socials/styles.css?1699339279171 */
