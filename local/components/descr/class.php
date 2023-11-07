@@ -7,7 +7,7 @@ use Bitrix\Main\Loader;
 
 use E05idiip\Descr\DescrTable;
 
-class CIBlockSocialNetworks extends CBitrixComponent
+class CIBlockDescr extends CBitrixComponent
 {
     public function executeComponent()
     {
