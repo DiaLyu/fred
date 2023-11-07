@@ -6,8 +6,22 @@ use Bitrix\Main\Diag\Debug;
 use Bitrix\Main\Loader;
 use Kint\Kint;
 use E05idiip\Netnowork\NetnoworkTable;
+use \Bitrix\Main\Application;
 
 class SocialNetworks{
+
+    public static function addEventDescr(&$arFields){
+        Kint::dump($arFields);
+        // $connection = Application::getConnection();
+        // $connection->startTransaction();
+        // try {
+        //     self::makeSomeAction();
+        //     $connection->commitTransaction();
+        // } catch (Throwable $e) {
+        //     $connection->rollbackTransaction();
+        //     LogHandler::writeMessage($e);
+        // }
+    }
 
     public static function addEventNetwork(&$arFields){
         $network_link = SocialNetworks::choiceLinkName($arFields['NAME']); // получение ссылки по названию соцсети

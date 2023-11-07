@@ -6,6 +6,6 @@ use Kint\Kint;
 $eventManager = \Bitrix\Main\EventManager::getInstance();
 $eventManager->addEventHandler("iblock", "OnAfterIBlockElementUpdate", ['E05idiip\\Socials\\SocialNetworks', 'updateEventNetwork']);
 $eventManager->addEventHandler("iblock", "OnAfterIBlockElementAdd", ['E05idiip\\Socials\\SocialNetworks', 'addEventNetwork']);
-
+$eventManager->addEventHandler("iblock", "OnAfterIBlockElementAdd", ['E05idiip\\Socials\\SocialNetworks', 'addEventDescr']);
 
 ?>
