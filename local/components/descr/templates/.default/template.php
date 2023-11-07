@@ -4,14 +4,17 @@ require($_SERVER["DOCUMENT_ROOT"] . "/local/php_interface/vendor/autoload.php");
 $this->addExternalCss("/local/css/socials/styles.css");
 ?>
 
-<div class="social-container">
-    <?if (!empty($arResult)){
-        foreach ($arResult as $arItem){?>
-            <div class="social-container-item" style="background: <?=$arItem["COLOR"]?>">
-                <?echo var_dump($arItem);?>
-            </div>
-    <?     // echo '<br>'.var_dump($arItem).'<br>';
-    }
-    // E05idiip\Helpers\Debug::dump($arParams);
-    }?>
+<div class="table-container">
+    <table>
+            <?if (!empty($arResult)){
+                foreach ($arResult as $arItem){?>
+                    <tr>
+                        <td><?echo $arItem["ID"];?></td>
+                        <td><?echo $arItem["DESCRIPTION"];?></td>
+                    <tr>
+            <?
+            }
+            // E05idiip\Helpers\Debug::dump($arParams);
+            }?>
+    </table>
 </div>
