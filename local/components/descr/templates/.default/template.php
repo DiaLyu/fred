@@ -8,7 +8,7 @@ $this->addExternalCss("/local/css/socials/styles.css");
     <?if (!empty($arResult)){
         foreach ($arResult as $arItem){?>
             <div class="social-container-item" style="background: <?=$arItem["COLOR"]?>">
-                <?echo $arItem;?>
+                <?echo var_dump($arItem);?>
             </div>
     <?     // echo '<br>'.var_dump($arItem).'<br>';
     }
