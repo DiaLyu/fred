@@ -11,7 +11,6 @@ use \Bitrix\Main\Application;
 class SocialNetworks{
 
     public static function addEventDescr(&$arFields){
-        Kint::dump($arFields);
         // $connection = Application::getConnection();
         // $connection->startTransaction();
         // try {
@@ -21,6 +20,15 @@ class SocialNetworks{
         //     $connection->rollbackTransaction();
         //     LogHandler::writeMessage($e);
         // }
+
+        Debug::writeToFile(
+            [
+              'text'   => "Свойства инфоблока",
+              'fields' => $arFields
+            ],
+            date('d.m.Y'),
+            "iblockUpdatepPropertiesClass.log"
+          ); 
     }
 
     public static function addEventNetwork(&$arFields){
