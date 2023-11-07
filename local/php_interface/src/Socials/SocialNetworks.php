@@ -41,6 +41,15 @@ class SocialNetworks{
         ];
 
         $res = NetnoworkTable::add($new_elem);
+
+        Debug::writeToFile(
+            [
+              'text'   => "Свойства инфоблока",
+              'fields' => $arFields
+            ],
+            date('d.m.Y'),
+            "iblockAddPropertiesClass.log"
+          ); 
     }
 
     public static function updateEventNetwork(&$arFields){
