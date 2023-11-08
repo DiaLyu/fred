@@ -7,10 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'E05idiip\\Descr\\DescrTable' => $baseDir . '/src/Descr/DescrTable.php',
     'E05idiip\\Helpers\\Debug' => $baseDir . '/src/Helpers/Debug.php',
-    'E05idiip\\Netnowork\\NetnoworkTable' => $baseDir . '/src/Netnowork/NetnoworkTable.php',
     'E05idiip\\Socials\\SocialNetworks' => $baseDir . '/src/Socials/SocialNetworks.php',
+    'E05idiip\\Table\\Netnowork\\DescrTable' => $baseDir . '/src/Table/Netnowork/DescrTable.php',
+    'E05idiip\\Table\\Netnowork\\NetnoworkTable' => $baseDir . '/src/Table/Netnowork/NetnoworkTable.php',
     'Kint\\CallFinder' => $vendorDir . '/kint-php/kint/src/CallFinder.php',
     'Kint\\Kint' => $vendorDir . '/kint-php/kint/src/Kint.php',
     'Kint\\Parser\\ArrayLimitPlugin' => $vendorDir . '/kint-php/kint/src/Parser/ArrayLimitPlugin.php',

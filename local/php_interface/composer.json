@@ -5,7 +5,9 @@
     },
     "autoload": {
         "psr-4": {
-            "E05idiip\\": "src/"
+            "E05idiip\\": "src/",
+            "E05idiip\\Socials\\": "src/Socials/",
+            "E05idiip\\Table\\":  "src/Table/"
         }
     },
     "authors": [

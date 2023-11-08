@@ -11,6 +11,7 @@ $this->addExternalCss("/local/css/socials/styles.css");
                 <a href="<?= isset($arItem["LINK"]) ? $arItem["LINK"] : '#'?>" class="social-container-link">
                     <img src="<?= $arItem["ICON_NETWORK"]['VALUE']?>" alt="<?= $arItem["NAME"]?>">               
                 </a>
+                <p><?= $arItem["DESCRIPTION"] ? $arItem["DESCRIPTION"] : "пока нет";?></p>
             </div>
     <?     // echo '<br>'.var_dump($arItem).'<br>';
     }

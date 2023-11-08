@@ -5,7 +5,7 @@ use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\SystemException;
 use Bitrix\Main\Loader;
 
-use E05idiip\Netnowork\NetnoworkTable;
+use E05idiip\Table\Netnowork\NetnoworkTable;
 
 class CIBlockSocialNetworks extends CBitrixComponent
 {
@@ -47,17 +47,26 @@ class CIBlockSocialNetworks extends CBitrixComponent
             $query->registerRuntimeField(
                 'network_field',
                 [
-                    'data_type' => 'E05idiip\Netnowork\NetnoworkTable',
+                    'data_type' => 'E05idiip\Table\Netnowork\NetnoworkTable',
                     'reference' => ['=this.ID' => 'ref.ELEMENT_ID'],
                     'join_type' => 'LEFT'
                 ]
             );
-            $query->setSelect(['ID', 'NAME', 'ICON_NETWORK', 'network_field.ID', 'network_field.ELEMENT_ID', 'network_field.COLOR', 'network_field.LINK']);
+            $query->registerRuntimeField(
+                'network_desc',
+                [
+                    'data_type' => 'E05idiip\Table\Netnowork\DescrTable',
+                    'reference' => ['=this.ID' => 'ref.ELEMENT_ID'],
+                    'join_type' => 'LEFT'
+                ]
+            );
+            $query->setSelect(['ID', 'NAME', 'ICON_NETWORK', 'network_field.ID', 'network_field.ELEMENT_ID', 'network_field.COLOR', 'network_field.LINK', 'network_desc.DESCRIPTION']);
             $result = $query->exec();
             while ($row = $result->fetch()) {
                 $row['ICON_NETWORK']['VALUE'] = CFile::GetPath($row['IBLOCK_ELEMENTS_ELEMENT_NETWORKAPI_ICON_NETWORK_VALUE']);
                 $row['LINK'] = $row['IBLOCK_ELEMENTS_ELEMENT_NETWORKAPI_network_field_LINK'];
                 $row['COLOR'] = $row['IBLOCK_ELEMENTS_ELEMENT_NETWORKAPI_network_field_COLOR'];
+                $row['DESCRIPTION'] = $row["IBLOCK_ELEMENTS_ELEMENT_NETWORKAPI_network_desc_DESCRIPTION"];
                 $this->arResult[] = $row;
             }
 

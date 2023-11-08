@@ -17,6 +17,8 @@ class ComposerStaticInit5cfc4ed934293930f8f8aad37ce498fa
         ),
         'E' => 
         array (
+            'E05idiip\\Table\\' => 15,
+            'E05idiip\\Socials\\' => 17,
             'E05idiip\\' => 9,
         ),
     );
@@ -26,6 +28,14 @@ class ComposerStaticInit5cfc4ed934293930f8f8aad37ce498fa
         array (
             0 => __DIR__ . '/..' . '/kint-php/kint/src',
         ),
+        'E05idiip\\Table\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Table',
+        ),
+        'E05idiip\\Socials\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Socials',
+        ),
         'E05idiip\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -34,10 +44,10 @@ class ComposerStaticInit5cfc4ed934293930f8f8aad37ce498fa
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'E05idiip\\Descr\\DescrTable' => __DIR__ . '/../..' . '/src/Descr/DescrTable.php',
         'E05idiip\\Helpers\\Debug' => __DIR__ . '/../..' . '/src/Helpers/Debug.php',
-        'E05idiip\\Netnowork\\NetnoworkTable' => __DIR__ . '/../..' . '/src/Netnowork/NetnoworkTable.php',
         'E05idiip\\Socials\\SocialNetworks' => __DIR__ . '/../..' . '/src/Socials/SocialNetworks.php',
+        'E05idiip\\Table\\Netnowork\\DescrTable' => __DIR__ . '/../..' . '/src/Table/Netnowork/DescrTable.php',
+        'E05idiip\\Table\\Netnowork\\NetnoworkTable' => __DIR__ . '/../..' . '/src/Table/Netnowork/NetnoworkTable.php',
         'Kint\\CallFinder' => __DIR__ . '/..' . '/kint-php/kint/src/CallFinder.php',
         'Kint\\Kint' => __DIR__ . '/..' . '/kint-php/kint/src/Kint.php',
         'Kint\\Parser\\ArrayLimitPlugin' => __DIR__ . '/..' . '/kint-php/kint/src/Parser/ArrayLimitPlugin.php',

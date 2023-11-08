@@ -1,8 +1,8 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001699357075';
-$dateexpire = '001735357075';
-$ser_content = 'a:2:{s:7:"CONTENT";s:1011:"
+$datecreate = '001699358491';
+$dateexpire = '001735358491';
+$ser_content = 'a:2:{s:7:"CONTENT";s:2222:"
 <div class="table-container">
     <table>
                                 <tr>
@@ -12,6 +12,18 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:1011:"
                                 <tr>
                         <td>3</td>
                         <td>Application - абстрактный класс для любых приложений. Любой конкретный класс приложения является наследником этого абстрактного класса.</td>
+                    <tr>
+                                <tr>
+                        <td>4</td>
+                        <td>Приложение является базовой точкой входа (маршрутизатором) для обращения к глобальным сущностям ядра: соединение с источниками данных, управляемый кеш и т.п. Также приложение содержит глобальные данные, которые относятся к самому сайту и не зависят от кон</td>
+                    <tr>
+                                <tr>
+                        <td>5</td>
+                        <td>Статический метод возвращает соединение с базой данных указанного имени. Если параметр name - пустой, то возвращается соединение по умолчанию.</td>
+                    <tr>
+                                <tr>
+                        <td>6</td>
+                        <td>Как из класса приложения получить соединение с БД</td>
                     <tr>
                 </table>
 </div>";s:4:"VARS";a:2:{s:8:"arResult";a:0:{}s:18:"templateCachedData";a:3:{s:9:"frameMode";N;s:12:"frameModeCtx";s:55:"/local/components/descr/templates/.default/template.php";s:11:"externalCss";a:1:{i:0;s:29:"/local/css/socials/styles.css";}}}}';
